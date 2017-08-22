@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/demo.css" type="text/css">
+    <link rel="stylesheet" href="../css/zTreeStyle.css" type="text/css">
+    <script type="text/javascript" src="../js/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.ztree.core.min.js"></script>
+    <script>
+        var zTreeObj;
+        var setting = {};
+        var zNodes = [
+            {name:"我是爷爷", open:true, children:[
+                {name:"我是你爸爸"}, {name:"我是你叔叔"}]},
+            {name:"我是你小爷", open:true, children:[
+                {name:"我是你堂叔"}, {name:"我是你堂叔"}]}
+        ]
+        $(document).ready(function(){
+            zTreeObj = $.fn.zTree.init($("#treeDemo"), setting, zNodes);
+        });
+    </script>
+</head>
+<body>
+<div>
+    <ul id="treeDemo" class="ztree"></ul>
+</div>
+</body>
+</html>
